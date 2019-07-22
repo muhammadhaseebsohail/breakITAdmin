@@ -1,18 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-var DatabseConnection=require('../public/connection/DatabseConnection');
-
-/* GET home page. */
-DatabseConnection.init();
 
 router.get('/', function(req, res, next) {
  // res.render('index', { title: 'Expsresds' });
-  res.send('helsldo');
+  res.send('hello bluehost');
 });
-router.get('/api', function(req, res, next) {
+router.post('/api', function(req, res, next) {
   // res.render('index', { title: 'Expsresds' });
-   res.send('Backend of break it.');
+  console.log(req);
+
+   res.send('ok').statusCode(200);
  }); 
 
 
